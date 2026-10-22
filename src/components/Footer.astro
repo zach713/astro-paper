@@ -13,18 +13,16 @@ const t = useTranslations(Astro.currentLocale);
 const currentYear = new Date().getFullYear();
 ---
 
-<footer
-  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
-  {...attrs}
->
-  <div
-    class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
-  >
+<footer className={`${noMarginTop ? "" : "mt-auto"} w-full`} {...attrs}>
+  <div className="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4">
     <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
+    <div className="my-2 flex flex-col items-center gap-2 sm:flex-row sm:gap-4 text-sm opacity-80">
+      <span>Copyright &#169; {currentYear} | All rights reserved.</span>
+      <div className="flex gap-3">
+        <a href="/about" class="hover:underline hover:text-skin-accent">About Us</a>
+        <span>&#8226;</span>
+        <a href="/privacy" class="hover:underline hover:text-skin-accent">Privacy Policy</a>
+      </div>
     </div>
   </div>
 </footer>
