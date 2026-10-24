@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    { "source": "/posts/5-proven-digital-skills-to-earn-online", "destination": "/posts/5-digital-skills-to-start-earning-online/", "permanent": true },
+    { "source": "/posts/top-5-high-demand-freelance-skills-for-beginners", "destination": "/posts/freelance-skills-for-beginners/", "permanent": true },
+    { "source": "/posts/sell-specialized-notion-systems-digital-products", "destination": "/posts/how-to-sell-notion-templates/", "permanent": true },
+    { "source": "/posts/sell-high-ticket-notion-ai-templates", "destination": "/posts/notion-templates-with-ai-prompts/", "permanent": true },
+    { "source": "/posts/make-money-selling-ai-automations-no-code", "destination": "/posts/ai-automation-no-code-guide/", "permanent": true },
+    { "source": "/posts/ai-content-creation-guide", "destination": "/posts/ai-tools-for-content-creation/", "permanent": true },
+    { "source": "/posts/post-3", "destination": "/posts/free-digital-tools-for-beginners/", "permanent": true }
+  ]
+}
