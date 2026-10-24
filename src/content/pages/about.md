@@ -1,37 +1,28 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "Who we are, what Digital Skills Hub covers, and how we create our guides."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+Welcome to **Digital Skills Hub**, a blog about practical digital skills, free tools, freelancing, and building an online income step by step.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+## Why this site exists
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+A lot of online advice promises fast, effortless money. We think beginners deserve something more honest: clear explanations, realistic expectations, and tools they can try for free.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## What you will find here
 
-## Features
+- **Digital skills:** the skills clients and employers actually look for.
+- **Free tools:** AI assistants, design, video and productivity tools worth your time.
+- **Freelancing:** how to find a first client and deliver good work.
+- **Digital products:** how templates and other products are designed, priced, and sold.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+## How we write
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+- We explain the how and why, not only the headline.
+- We use realistic examples and say when numbers are illustrative.
+- We may use AI tools to help with research and drafting, and every article is reviewed and edited by a person before it is published.
+- We correct mistakes when we find them.
 
-and so much more.
+## Contact
 
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+Questions, feedback, or corrections? Visit the [contact page](/contact).

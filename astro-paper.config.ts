@@ -2,14 +2,14 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
-    title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
+    url: "https://astro-paper-rho-inky.vercel.app/",
+    title: "Digital Skills Hub",
+    description: "Practical, honest guides to digital skills, free tools, freelancing and building an online income.",
+    author: "Digital Skills Hub",
+    profile: "https://astro-paper-rho-inky.vercel.app/about",
     ogImage: "default-og.jpg",
     lang: "en",
-    timezone: "Asia/Bangkok",
+    timezone: "Africa/Casablanca",
     dir: "ltr",
   },
   posts: {
@@ -22,17 +22,11 @@ export default defineAstroPaperConfig({
     dynamicOgImage: true,
     showArchives: true,
     showBackButton: true,
-    editPost: {
-      enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
-    },
+    editPost: { enabled: false },
     search: "pagefind",
   },
   socials: [
-    { name: "github",   url: "https://github.com/satnaing/astro-paper" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "mail", url: "mailto:myblog.contac@outlook.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },

@@ -13,15 +13,17 @@ const t = useTranslations(Astro.currentLocale);
 const currentYear = new Date().getFullYear();
 ---
 
-<footer className={`${noMarginTop ? "" : "mt-auto"} w-full`} {...attrs}>
-  <div className="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4">
+<footer class={`${noMarginTop ? "" : "mt-auto"} w-full`} {...attrs}>
+  <div class="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4">
     <Socials />
-    <div className="my-2 flex flex-col items-center gap-2 sm:flex-row sm:gap-4 text-sm opacity-80">
-      <span>Copyright &#169; {currentYear} | All rights reserved.</span>
-      <div className="flex gap-3">
-        <a href="/about" class="hover:underline hover:text-skin-accent">About Us</a>
+    <div class="my-2 flex flex-col items-center gap-2 sm:flex-row sm:gap-4 text-sm opacity-80">
+      <span>&#169; {currentYear} Digital Skills Hub</span>
+      <div class="flex gap-3">
+        <a href="/about" class="hover:underline hover:text-accent">About</a>
         <span>&#8226;</span>
-        <a href="/privacy" class="hover:underline hover:text-skin-accent">Privacy Policy</a>
+        <a href="/contact" class="hover:underline hover:text-accent">Contact</a>
+        <span>&#8226;</span>
+        <a href="/privacy" class="hover:underline hover:text-accent">Privacy Policy</a>
       </div>
     </div>
   </div>

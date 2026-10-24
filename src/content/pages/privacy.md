@@ -1,24 +1,50 @@
 ---
 title: "Privacy Policy"
-description: "Read our privacy policy to understand how we handle user data and advertising cookies."
+description: "How Digital Skills Hub collects, uses, and protects visitor information, including cookies and advertising."
 ---
 
-# Privacy Policy
+_Last updated: October 2026_
 
-Your privacy is extremely important to us. This Privacy Policy document outlines the types of personal information that is received and collected by our website and how it is used.
+Your privacy matters to us. This policy explains what information is collected when you visit **Digital Skills Hub** and how it is used.
 
-## Log Files
-Like many other Web sites, we make use of log files. The information inside the log files includes internet protocol (IP) addresses, type of browser, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user movement around the site, and gather demographic information.
+## Information we collect
 
-## Cookies and Web Beacons
-We use cookies to store information about visitors' preferences, record user-specific information on which pages the user accesses or visits, customize Web page content based on visitors' browser type or other information that the visitor sends via their browser.
+- **Log data:** like most websites, our hosting provider records technical information such as IP address, browser type, device, referring page, and time of visit.
+- **Messages you send us:** if you email us, we receive your email address and the content of your message, and use it only to reply.
 
-## Google DoubleClick DART Cookie
-* Google, as a third-party vendor, uses cookies to serve ads on our site.
-* Google's use of the DART cookie enables it to serve ads to users based on their visit to our site and other sites on the Internet.
-* Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL: [https://policies.google.com/technologies/ads](https://policies.google.com/technologies/ads)
+We do not require visitors to create accounts.
 
-## Third-Party Advertising
-Our advertising partners, including Google AdSense, may use cookies and web beacons on our site. These third-party ad servers or ad networks use technology to send the advertisements and links that appear on our site directly to your browser. They automatically receive your IP address when this occurs. 
+## Cookies
 
-If you wish to disable cookies, you may do so through your individual browser options.
+We use cookies and similar technologies to remember preferences (such as light or dark theme) and to measure and improve the site. You can control or delete cookies in your browser settings.
+
+## Advertising and third parties
+
+We may display ads served by third-party vendors, including Google.
+
+- Third-party vendors, including Google, use cookies to serve ads based on your previous visits to this and other websites.
+- Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites on the Internet.
+- You can opt out of personalized advertising by visiting [Google Ads Settings](https://adssettings.google.com).
+- You can learn more about how Google uses data at [How Google uses information from sites that use our services](https://policies.google.com/technologies/partner-sites).
+
+Third parties have their own privacy policies, which we do not control.
+
+## External links
+
+Our articles may link to other websites. We are not responsible for their content or privacy practices.
+
+## Your choices
+
+Depending on where you live, you may have the right to ask what data we hold about you, or to ask us to delete it. Contact us at the address below.
+
+## Children
+
+This site is not directed at children under 13, and we do not knowingly collect their personal information.
+
+## Changes to this policy
+
+We may update this policy from time to time. The date at the top shows the latest revision.
+
+## Contact
+
+Questions about this policy? Email [myblog.contac@outlook.com](mailto:myblog.contac@outlook.com).

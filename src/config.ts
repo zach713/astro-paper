@@ -1,54 +1,41 @@
-import type { Site, SocialMediaObjects } from "./types";
+/**
+ * Internal resolved configuration used throughout the codebase.
+ *
+ * Prefer editing `astro-paper.config.ts` instead of this file. This module exists to
+ * apply defaults and expose a fully-resolved config shape (`ResolvedAstroPaperConfig`).
+ */
+import userConfig from "@/astro-paper.config";
+import type { ResolvedAstroPaperConfig } from "./types/config";
+import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 
-export const SITE: Site = {
-  website: "https://astro-paper-rho-inky.vercel.app/",
-  author: "Digital Skills Hub",
-  profile: "https://astro-paper-rho-inky.vercel.app/",
-  desc: "Discover proven strategies for online earning, digital skills, CPA marketing, and modern work-from-home techniques.",
-  title: "Digital Skills Hub",
-  ogImage: "astropaper-og.jpg",
-  lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 6,
-  scheduledPostMargin: 15 * 60 * 1000,
-  showArchives: true,
-  showBackButton: true,
-  editPost: {
-    url: "",
-    text: "",
-    appendFilePath: false,
+const DEFAULT_OG_IMAGE = "default-og.jpg";
+
+const config: ResolvedAstroPaperConfig = {
+  site: {
+    ...userConfig.site,
+    ogImage: userConfig.site.ogImage ?? DEFAULT_OG_IMAGE,
+    lang: userConfig.site.lang ?? "en",
+    timezone: userConfig.site.timezone ?? "UTC",
+    dir: userConfig.site.dir ?? "ltr",
+    googleVerification:
+      userConfig.site.googleVerification || PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
+  posts: {
+    perPage: userConfig.posts?.perPage ?? 4,
+    perIndex: userConfig.posts?.perIndex ?? 4,
+    scheduledPostMargin:
+      userConfig.posts?.scheduledPostMargin ?? 15 * 60 * 1000,
+  },
+  features: {
+    lightAndDarkMode: userConfig.features?.lightAndDarkMode ?? true,
+    dynamicOgImage: userConfig.features?.dynamicOgImage ?? true,
+    showArchives: userConfig.features?.showArchives ?? true,
+    showBackButton: userConfig.features?.showBackButton ?? true,
+    editPost: userConfig.features?.editPost ?? { enabled: false },
+    search: userConfig.features?.search ?? "pagefind",
+  },
+  socials: userConfig.socials ?? [],
+  shareLinks: userConfig.shareLinks ?? [],
 };
 
-export const LOCALE = {
-  lang: "en",
-  langTag: ["en-EN"],
-} as const;
-
-export const LOGO_IMAGE = {
-  enable: false,
-  svg: true,
-  width: 216,
-  height: 46,
-};
-
-export const SOCIALS: SocialMediaObjects = [
-  {
-    name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: false,
-  },
-  {
-    name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Instagram`,
-    active: false,
-  },
-  {
-    name: "Mail",
-    href: "mailto:yourmail@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
-  },
-];
+export default config;
