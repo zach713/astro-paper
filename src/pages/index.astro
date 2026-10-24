@@ -10,6 +10,8 @@ import Socials from "@/components/Socials.astro";
 import Card from "@/components/Card.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getUniqueTags } from "@/utils/getUniqueTags";
+import { getPostUrl } from "@/utils/getPostPaths";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
 
@@ -22,6 +24,7 @@ const posts = await getCollection("posts");
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+const topics = getUniqueTags(posts).slice(0, 8);
 const homePath = getRelativeLocaleUrl(locale, "");
 ---
 
@@ -74,20 +77,55 @@ const homePath = getRelativeLocaleUrl(locale, "");
     </section>
 
     {
+      topics.length > 0 && (
+        <section id="topics" class="border-border border-b py-6">
+          <h2 class="text-muted-foreground mb-3 text-sm font-semibold tracking-widest uppercase">
+            Browse by topic
+          </h2>
+          <ul class="flex flex-wrap gap-2">
+            {topics.map(({ tag, tagName }) => (
+              <li>
+                <a
+                  href={getRelativeLocaleUrl(locale, `tags/${tag}/`)}
+                  class="border-border bg-muted hover:border-accent hover:text-accent inline-block rounded-full border px-3 py-1 text-sm font-medium"
+                >
+                  {tagName}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
       featuredPosts.length > 0 && (
         <section
           id="featured"
           class:list={[
-            "pt-12 pb-6",
+            "pt-10 pb-6",
             { "border-border border-b": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">
-            {t.home.featured}
-          </h2>
-          <ul>
-            {featuredPosts.map(data => (
-              <Card variant="h3" {...data} />
+          <h2 class="text-2xl font-semibold tracking-wide">Start here</h2>
+          <ul class="mt-4 grid gap-4 sm:grid-cols-2">
+            {featuredPosts.slice(0, 4).map(post => (
+              <li class="border-border bg-muted/40 hover:border-accent rounded-xl border p-5 transition-colors">
+                <a
+                  href={getPostUrl(post.id, post.filePath, Astro.currentLocale)}
+                  class="block"
+                >
+                  <h3 class="text-accent text-lg leading-snug font-semibold">
+                    {post.data.title}
+                  </h3>
+                  <p class="text-muted-foreground mt-2 text-sm">
+                    {post.data.description}
+                  </p>
+                  <span class="text-accent mt-3 inline-block text-sm font-medium">
+                    Read the guide &rarr;
+                  </span>
+                </a>
+              </li>
             ))}
           </ul>
         </section>
@@ -108,6 +146,20 @@ const homePath = getRelativeLocaleUrl(locale, "");
         </section>
       )
     }
+
+    <section id="how-we-work" class="border-border bg-muted/40 my-8 rounded-xl border p-6">
+      <h2 class="text-xl font-semibold">How we work</h2>
+      <ul class="text-muted-foreground mt-3 list-disc space-y-1 ps-5">
+        <li>Beginner-friendly explanations, step by step.</li>
+        <li>Realistic expectations. Income examples are illustrative, never promises.</li>
+        <li>Every article is reviewed and edited by a person before publishing.</li>
+      </ul>
+      <p class="mt-3 text-sm">
+        <a class="text-accent underline underline-offset-4" href="/about">About us</a>
+        &middot;
+        <a class="text-accent underline underline-offset-4" href="/disclaimer">Disclaimer</a>
+      </p>
+    </section>
 
     <div class="my-8 text-center">
       <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
