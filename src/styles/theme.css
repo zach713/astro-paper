@@ -11,24 +11,25 @@
 }
 
 /* Light theme values */
+/* Clean white base with ONE bold accent */
 :root,
 [data-theme="light"] {
-  --background: #fafaf9;
-  --foreground: #1c1917;
-  --accent: #4338ca;
+  --background: #ffffff;
+  --foreground: #111827;
+  --accent: #0f766e;
   --accent-foreground: #ffffff;
-  --muted: #eeeeee;
-  --muted-foreground: #57534e;
-  --border: #e7e5e4;
+  --muted: #f3f4f6;
+  --muted-foreground: #4b5563;
+  --border: #e5e7eb;
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
-  --background: #0f172a;
-  --foreground: #e2e8f0;
-  --accent: #fbbf24;
-  --accent-foreground: #0f172a;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --border: #334155;
+  --background: #0b1220;
+  --foreground: #e5e7eb;
+  --accent: #5eead4;
+  --accent-foreground: #0b1220;
+  --muted: #162033;
+  --muted-foreground: #9ca3af;
+  --border: #243049;
 }

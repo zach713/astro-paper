@@ -87,7 +87,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
               <li>
                 <a
                   href={getRelativeLocaleUrl(locale, `tags/${tag}/`)}
-                  class="border-border bg-muted hover:border-accent hover:text-accent inline-block rounded-full border px-3 py-1 text-sm font-medium"
+                  class="border-border bg-muted hover:border-accent hover:text-accent inline-block rounded-full border px-4 py-1.5 text-sm font-semibold"
                 >
                   {tagName}
                 </a>
@@ -134,18 +134,39 @@ const homePath = getRelativeLocaleUrl(locale, "");
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
+        <section id="recent-posts" class="pt-10 pb-6">
           <h2 class="text-2xl font-semibold tracking-wide">
             {t.home.recentPosts}
           </h2>
-          <ul>
-            {recentPosts.slice(0, postsConfig.perIndex).map(data => (
-              <Card variant="h3" {...data} />
+          <ul class="mt-4 grid gap-4 sm:grid-cols-2">
+            {recentPosts.slice(0, postsConfig.perIndex).map(post => (
+              <li class="border-border hover:border-accent rounded-xl border p-5 transition-colors">
+                <a
+                  href={getPostUrl(post.id, post.filePath, Astro.currentLocale)}
+                  class="block"
+                >
+                  <h3 class="text-lg leading-snug font-semibold">
+                    {post.data.title}
+                  </h3>
+                  <p class="text-muted-foreground mt-2 text-sm">
+                    {post.data.description}
+                  </p>
+                </a>
+              </li>
             ))}
           </ul>
         </section>
       )
     }
+
+    <section id="about-publisher" class="border-border my-8 rounded-xl border p-6">
+      <h2 class="text-xl font-semibold">Who is behind this site</h2>
+      <p class="text-muted-foreground mt-3">
+        Digital Skills Hub is an independent publication for people who are
+        starting out online. We research each topic, test the tools we
+        recommend where possible, and keep our advice practical and honest.
+      </p>
+    </section>
 
     <section id="how-we-work" class="border-border bg-muted/40 my-8 rounded-xl border p-6">
       <h2 class="text-xl font-semibold">How we work</h2>
