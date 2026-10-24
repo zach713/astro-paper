@@ -31,3 +31,6 @@ public/pagefind
 
 # docker compose
 compose.override.yaml
+
+# Generated from src/content/blog by scripts/sync-blog-posts.mjs
+src/content/posts/auto-*
